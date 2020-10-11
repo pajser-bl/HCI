@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCI.Data.Model;
+using System;
 using System.ComponentModel;
 
 namespace HCI.UI
@@ -8,7 +9,7 @@ namespace HCI.UI
         public event PropertyChangedEventHandler PropertyChanged;
 
         private DateTime date;
-        private string notes;
+        private Note note;
         private bool enabled;
         private bool isTargetMonth;
         private bool isToday;
@@ -43,15 +44,25 @@ namespace HCI.UI
             }
         }
 
-        public string Notes
+        public Note getNote()
         {
-            get { return notes; }
-            set
-            {
-                notes = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Notes)));
-            }
+            return note;
         }
+        
+        public void setNote(Note _note)
+        {
+            note=_note;
+        }
+        public string Notes()
+        {
+            if (note.Id != null)
+            {
+                return note.Name;
+            }
+            return "";
+        }
+
+
 
         public DateTime Date
         {

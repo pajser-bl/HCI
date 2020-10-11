@@ -43,7 +43,7 @@
                                 </ItemsControl.ItemsPanel>
                             </ItemsControl>-->
 
-                            <ItemsControl ItemsSource="{Binding Days}">
+                            <ItemsControl x:Name="Days"  ItemsSource="{Binding Days}">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
                                         <!--Box-->

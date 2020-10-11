@@ -55,140 +55,145 @@
         <!--<Border BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">-->
 
-        
-            <!--<TextBlock Text="{Binding Date}" />-->
 
-            <Grid Height="30" DockPanel.Dock="Top">
+        <!--<TextBlock Text="{Binding Date}" />-->
 
-            </Grid>
-            <ItemsControl Grid.Row="2" Grid.ColumnSpan="3">
-                <TextBlock TextAlignment="Center" Text="{DynamicResource sunday}" VerticalAlignment="Center">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF171717" Offset="0"/>
-                            <GradientStop Color="#FF040404" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background>
-                </TextBlock>
-                <TextBlock TextAlignment="Center" Text="{DynamicResource monday}" VerticalAlignment="Center">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF171717" Offset="0"/>
-                            <GradientStop Color="#FF040404" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background>
-                </TextBlock>
-                <TextBlock TextAlignment="Center" Text="{DynamicResource tuesday}" VerticalAlignment="Center">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF171717" Offset="0"/>
-                            <GradientStop Color="#FF040404" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background>
-                </TextBlock>
-                <TextBlock TextAlignment="Center" Text="{DynamicResource wednesday}" VerticalAlignment="Center">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF171717" Offset="0"/>
-                            <GradientStop Color="#FF040404" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background>
-                </TextBlock>
-                <TextBlock TextAlignment="Center" Text="{DynamicResource thursday}" VerticalAlignment="Center">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF171717" Offset="0"/>
-                            <GradientStop Color="#FF040404" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background>
-                </TextBlock>
-                <TextBlock TextAlignment="Center" Text="{DynamicResource friday}" VerticalAlignment="Center">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF171717" Offset="0"/>
-                            <GradientStop Color="#FF040404" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background>
-                </TextBlock>
-                <TextBlock TextAlignment="Center" Text="{DynamicResource saturday}" VerticalAlignment="Center">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF171717" Offset="0"/>
-                            <GradientStop Color="#FF040404" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background>
-                </TextBlock>
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Rows="1" Columns="7" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-            </ItemsControl>
-        <!--<HCICalendar:Calendar Grid.Row="3" Grid.ColumnSpan="3" x:Name="Calendar" DayChanged="Calendar_DayChanged" Margin="0,-29,0,0" VerticalAlignment="Stretch"/>-->
+        <!--<Grid Height="30" DockPanel.Dock="Top">-->
+
+        <!--</Grid>-->
+        <ItemsControl Grid.Row="2" Grid.ColumnSpan="3">
+            <TextBlock TextAlignment="Center" Text="{DynamicResource sunday}" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF171717" Offset="0"/>
+                        <GradientStop Color="#FF040404" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Text="{DynamicResource monday}" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF171717" Offset="0"/>
+                        <GradientStop Color="#FF040404" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Text="{DynamicResource tuesday}" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF171717" Offset="0"/>
+                        <GradientStop Color="#FF040404" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Text="{DynamicResource wednesday}" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF171717" Offset="0"/>
+                        <GradientStop Color="#FF040404" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Text="{DynamicResource thursday}" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF171717" Offset="0"/>
+                        <GradientStop Color="#FF040404" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Text="{DynamicResource friday}" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF171717" Offset="0"/>
+                        <GradientStop Color="#FF040404" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Text="{DynamicResource saturday}" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF171717" Offset="0"/>
+                        <GradientStop Color="#FF040404" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="1" Columns="7" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+        <Border Grid.Row="3" Grid.ColumnSpan="3" Background="Transparent"
+                            BorderBrush="Aqua"
+                            BorderThickness="0.5">
+            <DockPanel>
+                <TextBlock Text="{Binding Date}" />
+
+                
+                <!--<HCICalendar:Calendar Grid.Row="3" Grid.ColumnSpan="3" x:Name="Calendar" DayChanged="Calendar_DayChanged" Margin="0,-29,0,0" VerticalAlignment="Stretch"/>-->
 
 
-        <!--<ItemsControl ItemsSource="{Binding Days}">-->
-            
-            <!--<ItemsControl x:Name="Days">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        --><!--Box--><!--
-                        <Border BorderBrush="Black" BorderThickness="1" Padding="0">
+                <!--<ItemsControl ItemsSource="{Binding Days}">-->
 
-                            --><!--<Border Name="InnerBorder" BorderBrush="{Binding Path=Notes, Converter={StaticResource DayBorderColorConverter}}" BorderThickness="2">--><!--
+                <ItemsControl x:Name="Days">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <!--Box-->
+                            <Border BorderBrush="Black" BorderThickness="1" Padding="0">
+                                <Border Name="InnerBorder" BorderBrush="{Binding Path=Notes, Converter={StaticResource DayBorderColorConverter}}" BorderThickness="2">
+                                    <Border.Style>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Style.Triggers>
+                                                <!--Current Day-->
+                                                <DataTrigger Binding="{Binding IsToday}" Value="true">
+                                                    <Setter Property="Border.Background">
+                                                        <Setter.Value>
+                                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                                <GradientStop Color="#FF1EA6C8" Offset="0"/>
+                                                                <GradientStop Color="#FF0691B3" Offset="1"/>
+                                                            </LinearGradientBrush>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
 
-                            <Border.Style>
-                                <Style TargetType="{x:Type Border}">
-                                    <Style.Triggers>
-                                        --><!--Current Day--><!--
-                                        <DataTrigger Binding="{Binding IsToday}" Value="true">
-                                            <Setter Property="Border.Background">
-                                                <Setter.Value>
-                                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                        <GradientStop Color="#FF1EA6C8" Offset="0"/>
-                                                        <GradientStop Color="#FF0691B3" Offset="1"/>
-                                                    </LinearGradientBrush>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Border.Style>
+                                    <DockPanel>
+                                        <!--Day Number-->
 
-                            <DockPanel>
-                                --><!--Day Number--><!--
-                                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" FlowDirection="RightToLeft">
-                                    <TextBlock TextAlignment="Right" Text="{Binding Date, Converter={StaticResource DateConverter}, ConverterParameter=DAY}" FontSize="14" Margin="5,5,5,5" >
-                                        <TextBlock.Style>
-                                            <Style TargetType="{x:Type TextBlock}">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding IsTargetMonth}" Value="false">
-                                                        <Setter Property="TextBlock.Foreground" Value="Gray"></Setter>
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                </StackPanel>
-                                <Button Background="Transparent">
-                                    <StackPanel>
-                                        <Label></Label>
-                                    </StackPanel>
-                                </Button>
+                                        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" FlowDirection="RightToLeft">
+                                            <TextBlock TextAlignment="Right" Text="{Binding Date, Converter={StaticResource DateConverter}, ConverterParameter=DAY}" FontSize="14" Margin="5,5,5,5" >
+                                                <TextBlock.Style>
+                                                    <Style TargetType="{x:Type TextBlock}">
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsTargetMonth}" Value="false">
+                                                                <Setter Property="TextBlock.Foreground" Value="Gray"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <Button CommandParameter="{Binding Date}" Background="Transparent" Click="Button_Click_Day" HorizontalAlignment="Stretch">
+                                            <Label Content="{Binding Notes}"/>
+                                        </Button>
 
-                                --><!--<TextBox IsEnabled="{Binding IsEnabled}" Text="{Binding Notes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" TextWrapping="Wrap" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="{x:Null}" Foreground="White" />--><!--
-                            </DockPanel>
-                        </Border>
-                        --><!--</Border>-->
 
-                    <!--</DataTemplate>
-                </ItemsControl.ItemTemplate>
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Rows="6" Columns="7" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-            </ItemsControl>-->
-        <!--</Border>-->
+                                        <!--<TextBox IsEnabled="{Binding IsEnabled}" Text="{Binding Notes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" TextWrapping="Wrap" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="{x:Null}" Foreground="White" />-->
+                                    </DockPanel>
+                                </Border>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="6" Columns="7" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </DockPanel>
+        </Border>
     </Grid>
 </Window>

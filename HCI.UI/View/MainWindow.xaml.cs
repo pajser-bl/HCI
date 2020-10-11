@@ -1,10 +1,12 @@
 ﻿using HCI.Data.Model;
 using HCI.UI.Converters;
+using HCI.UI.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace HCI.UI
 {
@@ -26,7 +28,7 @@ namespace HCI.UI
 
         //public ObservableCollection<Day> Days { get; private set; }
 
-        private readonly User _user;
+        protected readonly User _user;
         public MainWindow(User user)
         {
             InitializeComponent();
@@ -70,7 +72,7 @@ namespace HCI.UI
                 days.Add(day);
                 d = d.AddDays(1);
             }
-            //Days.ItemsSource = days;
+            Days.ItemsSource = days;
         }
 
         private void RefreshCalendar()
@@ -109,14 +111,13 @@ namespace HCI.UI
         {
             return Convert.ToInt32(dow.ToString("D"));
         }
-        public class DayChangedEventArgs : EventArgs
-        {
-            public Day Day { get; private set; }
 
-            public DayChangedEventArgs(Day day)
-            {
-                this.Day = day;
-            }
+        private void Button_Click_Day(object sender, RoutedEventArgs e)
+        {
+            var b = sender as Button;
+            var date = b.CommandParameter;
+            var noteW = new NoteWindow(date,_user);
+            noteW.ShowDialog();
         }
     }
     public class DayChangedEventArgs : EventArgs

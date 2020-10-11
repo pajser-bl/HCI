@@ -5,6 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <converters:DateConverter x:Key="DateConverter" />
+            <converters:DayBorderColorConverter x:Key="DayBorderColorConverter" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary x:Name="Language" Source="/Languages/en-US.xaml" />
                 <ResourceDictionary x:Name="Theme" Source="/Styles/dark.xaml" />
