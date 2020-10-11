@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCI.Data", "HCI.Data\HCI.Data.csproj", "{F271F4C7-2968-4967-868C-D94128DB7E56}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCI.UI", "HCI.UI\HCI.UI.csproj", "{C0EC8834-9E17-48AB-84AF-41A25278A999}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCI.Calendar", "HCI.Calendar\HCI.Calendar.csproj", "{8AA8A073-96D2-4D69-8149-FD81C3FD9CAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F271F4C7-2968-4967-868C-D94128DB7E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F271F4C7-2968-4967-868C-D94128DB7E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F271F4C7-2968-4967-868C-D94128DB7E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F271F4C7-2968-4967-868C-D94128DB7E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0EC8834-9E17-48AB-84AF-41A25278A999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0EC8834-9E17-48AB-84AF-41A25278A999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0EC8834-9E17-48AB-84AF-41A25278A999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0EC8834-9E17-48AB-84AF-41A25278A999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA8A073-96D2-4D69-8149-FD81C3FD9CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA8A073-96D2-4D69-8149-FD81C3FD9CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA8A073-96D2-4D69-8149-FD81C3FD9CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA8A073-96D2-4D69-8149-FD81C3FD9CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65A8A8C7-2A7C-4FF3-98AA-BD5F41393360}
+	EndGlobalSection
+EndGlobal

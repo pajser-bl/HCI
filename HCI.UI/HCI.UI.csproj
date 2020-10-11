@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>HCI.UI</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>HCI.UI</AssemblyName>
+    <StartupObject>HCI.UI.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="gear.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HCI.Data\HCI.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="gear.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+﻿<Application x:Class="HCI.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:converters="clr-namespace:HCI.UI.Converters"
+             StartupUri="/View/LoginWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <converters:DateConverter x:Key="DateConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="Language" Source="/Languages/en-US.xaml" />
+                <ResourceDictionary x:Name="Theme" Source="/Styles/dark.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

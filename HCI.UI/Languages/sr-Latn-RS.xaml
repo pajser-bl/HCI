@@ -1,0 +1,55 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:HCIUI="clr-namespace:HCI.UI">
+
+    <system:String x:Key="hci">Interakcija čovjek-računar</system:String>
+    
+    <system:String x:Key="login">Uloguj se</system:String>
+    <system:String x:Key="logout">Izloguj se</system:String>
+    <system:String x:Key="username">Korisničko ime</system:String>
+    <system:String x:Key="password">Šifra</system:String>
+    <system:String x:Key="apply">Primjeni</system:String>
+    <system:String x:Key="cancel">Otkaži</system:String>
+    <system:String x:Key="setting">Svojstvo</system:String>
+    <system:String x:Key="settings">Podešavanja</system:String>
+    <system:String x:Key="adminwindow">Administracija</system:String>
+
+
+    <system:String x:Key="theme">Tema</system:String>
+    <system:String x:Key="dark">Tamna</system:String>
+    <system:String x:Key="light">Svijetla</system:String>
+    <system:String x:Key="green">Zelena</system:String>
+
+
+    <system:String x:Key="language">Jezik</system:String>
+    <system:String x:Key="english">Engleski</system:String>
+    <system:String x:Key="serbian">Srpski</system:String>
+
+
+    <system:String x:Key="date">Datum</system:String>
+    <system:String x:Key="time">Vrijeme</system:String>
+    
+    <system:String x:Key="dow">Dan u sedmici</system:String>
+    <system:String x:Key="monday">Ponedeljak</system:String>
+    <system:String x:Key="tuesday">Utorak</system:String>
+    <system:String x:Key="wednesday">Srijeda</system:String>
+    <system:String x:Key="thursday">Četvrtak</system:String>
+    <system:String x:Key="friday">Petak</system:String>
+    <system:String x:Key="saturday">Subota</system:String>
+    <system:String x:Key="sunday">Nedelja</system:String>
+
+    <system:String x:Key="january">Januar</system:String>
+    <system:String x:Key="february">Februar</system:String>
+    <system:String x:Key="march">Mart</system:String>
+    <system:String x:Key="april">April</system:String>
+    <system:String x:Key="may">Maj</system:String>
+    <system:String x:Key="june">Jun</system:String>
+    <system:String x:Key="july">Jul</system:String>
+    <system:String x:Key="august">Avgust</system:String>
+    <system:String x:Key="september">Septembar</system:String>
+    <system:String x:Key="october">Oktobar</system:String>
+    <system:String x:Key="november">Novembar</system:String>
+    <system:String x:Key="december">Decembar</system:String>
+
+</ResourceDictionary>
