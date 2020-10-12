@@ -6,9 +6,21 @@
         xmlns:local="clr-namespace:HCI.UI.View"
         mc:Ignorable="d"
         Title="NoteWindow" Height="450" Width="800">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#FF313131" Offset="0"/>
+            <GradientStop Color="#FF181818" Offset="1"/>
+            <!--<GradientStop Color="#0f9b0f" Offset="0"/>-->
+            <!--<GradientStop Color="#000000" Offset="1"/>-->
+        </RadialGradientBrush>
+    </Window.Background>
+    <Window.Foreground>
+        <SolidColorBrush Color="White"/>
+    </Window.Foreground>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
@@ -17,5 +29,11 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock  Text="{DynamicResource date}" FontSize="20"/>
+            <TextBlock FontSize="20">: </TextBlock>
+            <TextBlock  x:Name="Date" FontSize="20"/>
+        </StackPanel>
+        
     </Grid>
 </Window>

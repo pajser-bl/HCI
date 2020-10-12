@@ -14,6 +14,8 @@
     <system:String x:Key="setting">Svojstvo</system:String>
     <system:String x:Key="settings">Podešavanja</system:String>
     <system:String x:Key="adminwindow">Administracija</system:String>
+    <system:String x:Key="search">Pretraži</system:String>
+    <system:String x:Key="calendar">Calendar</system:String>
 
 
     <system:String x:Key="theme">Tema</system:String>

@@ -44,18 +44,18 @@ namespace HCI.UI
             }
         }
 
-        public Note getNote()
+        public Note GetNote()
         {
             return note;
         }
         
-        public void setNote(Note _note)
+        public void SetNote(Note _note)
         {
             note=_note;
         }
         public string Notes()
         {
-            if (note.Id != null)
+            if (note!= null)
             {
                 return note.Name;
             }

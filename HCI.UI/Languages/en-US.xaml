@@ -14,6 +14,8 @@
     <system:String x:Key="setting">Setting</system:String>
     <system:String x:Key="settings">Settings</system:String>
     <system:String x:Key="adminwindow">Administration</system:String>
+    <system:String x:Key="search">Search</system:String>
+    <system:String x:Key="calendar">Calendar</system:String>
 
 
     <system:String x:Key="theme">Theme</system:String>

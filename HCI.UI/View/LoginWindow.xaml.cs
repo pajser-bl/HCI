@@ -50,7 +50,7 @@ namespace HCI.UI
             }
             if (user.Administrator)
             {
-                var admin = new AdminWindow();
+                var admin = new AdminWindow(user);
                 admin.Show();
             }
             else

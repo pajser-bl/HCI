@@ -27,6 +27,7 @@ namespace HCI.UI.View
             InitializeComponent();
             dbContext = ((App)Application.Current).DbContext;
             var note = dbContext.Notes.Where(x => x.User.Id == user.Id).Where(x => x.Datetime.Date.Equals(date));
+            Date.Text = ((DateTime)date).ToString("dd.MM.yyyy");
         }
     }
 }

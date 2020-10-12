@@ -116,7 +116,7 @@ namespace HCI.UI
         {
             var b = sender as Button;
             var date = b.CommandParameter;
-            var noteW = new NoteWindow(date,_user);
+            var noteW = new NoteWindow(date, _user);
             noteW.ShowDialog();
         }
     }

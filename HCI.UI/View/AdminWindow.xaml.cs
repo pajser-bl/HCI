@@ -1,5 +1,8 @@
-﻿using System;
+﻿using HCI.Data.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,9 +20,38 @@ namespace HCI.UI
     /// </summary>
     public partial class AdminWindow : Window
     {
-        public AdminWindow()
+        private readonly Data.AppDbContext dbContext;
+        private readonly User _user;
+        public AdminWindow(User user)
         {
             InitializeComponent();
+            dbContext = ((App)Application.Current).DbContext;
+            Users.ItemsSource = dbContext.Users.ToList();
+            _user = user;
+        }
+
+        private void UserSearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            var matches = from m in dbContext.Users
+                          where m.Username.Contains(UsernameSearch.Text)
+                          select m;
+            Users.ItemsSource = matches.ToList();
+        }
+
+        private void UpdateUsers_Click(object sender, RoutedEventArgs e)
+        {
+            var users = Users.ItemsSource;
+            foreach (User user in users)
+            {
+                dbContext.Users.Update(user);
+            }
+            dbContext.SaveChanges();
+        }
+        private void Calendar_Click(object sender, RoutedEventArgs e)
+        {
+            var main = new MainWindow(_user);
+            main.Show();
+            this.Close();
         }
     }
 }
