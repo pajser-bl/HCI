@@ -11,11 +11,16 @@
     <system:String x:Key="password">Password</system:String>
     <system:String x:Key="apply">Apply</system:String>
     <system:String x:Key="cancel">Cancel</system:String>
+    <system:String x:Key="delete">Delete</system:String>
     <system:String x:Key="setting">Setting</system:String>
     <system:String x:Key="settings">Settings</system:String>
     <system:String x:Key="adminwindow">Administration</system:String>
     <system:String x:Key="search">Search</system:String>
     <system:String x:Key="calendar">Calendar</system:String>
+    <system:String x:Key="description">Description</system:String>
+    <system:String x:Key="datetime">Datetime</system:String>
+    <system:String x:Key="name">Name</system:String>
+    <system:String x:Key="hasnote">*Note</system:String>
 
 
     <system:String x:Key="theme">Theme</system:String>

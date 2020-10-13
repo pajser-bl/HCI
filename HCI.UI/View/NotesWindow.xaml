@@ -1,11 +1,11 @@
-﻿<Window x:Class="HCI.UI.View.NoteWindow"
+﻿<Window x:Class="HCI.UI.View.NotesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HCI.UI.View"
         mc:Ignorable="d"
-        Title="NoteWindow" Height="450" Width="800">
+        Title="NotesWindow" Height="450" Width="800" Closed="Window_Closed" Closing="Window_Closing">
     <Window.Background>
         <RadialGradientBrush>
             <GradientStop Color="#FF313131" Offset="0"/>
@@ -22,6 +22,7 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -31,9 +32,19 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock  Text="{DynamicResource date}" FontSize="20"/>
-            <TextBlock FontSize="20">: </TextBlock>
+            <TextBlock FontSize="20">:</TextBlock>
             <TextBlock  x:Name="Date" FontSize="20"/>
         </StackPanel>
-        
+        <DataGrid Grid.Row="2" Grid.Column="1" x:Name = "Notes" Background="Transparent" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{DynamicResource time}" Binding="{Binding Datetime, StringFormat=\{0:dd.MM.yy HH:mm:ss\}}"/>
+                <DataGridTextColumn Header="{DynamicResource name}" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="{DynamicResource description}" Binding="{Binding Description}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--<Button x:Name="DeleteButton" Grid.Row="3" Grid.Column="1" Click="ButtonDelete_Click" HorizontalAlignment="Left" Content="{DynamicResource delete}" Margin="8,0,0,0" FontSize="20"/>-->
+        <Button x:Name="ApplyButton" Grid.Row="3" Grid.Column="1" Click="Button_Click" HorizontalAlignment="Right" Content="{DynamicResource apply}" Margin="0,0,8,0" FontSize="20"/>
+
     </Grid>
 </Window>

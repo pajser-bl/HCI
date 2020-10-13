@@ -177,7 +177,18 @@
                                             </TextBlock>
                                         </StackPanel>
                                         <Button CommandParameter="{Binding Date}" Background="Transparent" Click="Button_Click_Day" HorizontalAlignment="Stretch">
-                                            <Label Content="{Binding Notes}"/>
+                                            <Label Content="{DynamicResource hasnote}" Foreground="Red">
+                                                <Label.Style>
+                                                    <Style TargetType="{x:Type Label}">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding HasNote}" Value="True">
+                                                                <Setter Property="Visibility" Value="Hidden"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Label.Style>
+                                            </Label>
                                         </Button>
 
 

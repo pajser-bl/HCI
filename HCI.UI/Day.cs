@@ -9,10 +9,21 @@ namespace HCI.UI
         public event PropertyChangedEventHandler PropertyChanged;
 
         private DateTime date;
-        private Note note;
+        private bool hasNote;
         private bool enabled;
         private bool isTargetMonth;
         private bool isToday;
+
+        public bool HasNote
+        {
+            get {
+                return hasNote;
+            }
+            set {
+                hasNote = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(HasNote)));
+            }
+        }
 
         public bool IsToday
         {
@@ -44,26 +55,7 @@ namespace HCI.UI
             }
         }
 
-        public Note GetNote()
-        {
-            return note;
-        }
         
-        public void SetNote(Note _note)
-        {
-            note=_note;
-        }
-        public string Notes()
-        {
-            if (note!= null)
-            {
-                return note.Name;
-            }
-            return "";
-        }
-
-
-
         public DateTime Date
         {
             get { return date; }

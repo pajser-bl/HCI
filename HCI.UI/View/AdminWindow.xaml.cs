@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -43,6 +44,16 @@ namespace HCI.UI
             var users = Users.ItemsSource;
             foreach (User user in users)
             {
+                if (user.Username == null || user.Password == null || user.FirstName == null || user.LastName == null)
+                {
+                    var msg = "Fill all fields.";
+                    if (((int)_user.Language) == 1)
+                    {
+                        msg = "Popunite sva polja.";
+                    }
+                    MessageBox.Show(msg);
+                    return;
+                }
                 dbContext.Users.Update(user);
             }
             dbContext.SaveChanges();

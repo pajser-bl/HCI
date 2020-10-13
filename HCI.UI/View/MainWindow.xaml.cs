@@ -1,6 +1,7 @@
 ﻿using HCI.Data.Model;
 using HCI.UI.Converters;
 using HCI.UI.View;
+using System.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,7 +19,7 @@ namespace HCI.UI
         public static readonly DependencyProperty CurrentDateProperty = DependencyProperty.Register("CurrentDate", typeof(DateTime), typeof(MainWindow));
 
         public event EventHandler<DayChangedEventArgs> DayChanged;
-
+        private readonly Data.AppDbContext dbContext;
 
         public DateTime CurrentDate
         {
@@ -33,6 +34,7 @@ namespace HCI.UI
         {
             InitializeComponent();
             _user = user;
+            dbContext = ((App)Application.Current).DbContext;
             App.ChangeTheme((int)_user.Theme);
             App.ChangeLanguage((int)_user.Language);
 
@@ -62,13 +64,17 @@ namespace HCI.UI
             DateTime d = new DateTime(targetDate.Year, targetDate.Month, 1);
             int offset = DayOfWeekNumber(d.DayOfWeek);
             if (offset != 1) d = d.AddDays(-offset);
-
+            var matches=from n in dbContext.Notes
+                        where n.User.Id==_user.Id && n.Datetime>=targetDate && n.Datetime<=targetDate.AddDays(42)
+                        select n.Datetime.Date;
+            var daysWithNotes = matches.ToList();
             //Show 6 weeks each with 7 days = 42
             for (int box = 1; box <= 42; box++)
             {
                 Day day = new Day { Date = d, Enabled = true, IsTargetMonth = targetDate.Month == d.Month };
                 day.PropertyChanged += Day_Changed;
                 day.IsToday = d == DateTime.Today;
+                day.HasNote = !daysWithNotes.Contains(d.Date);
                 days.Add(day);
                 d = d.AddDays(1);
             }
@@ -116,8 +122,9 @@ namespace HCI.UI
         {
             var b = sender as Button;
             var date = b.CommandParameter;
-            var noteW = new NoteWindow(date, _user);
-            noteW.ShowDialog();
+            var noteW = new NotesWindow( _user,date);
+            noteW.Show();
+            this.Close();
         }
     }
     public class DayChangedEventArgs : EventArgs

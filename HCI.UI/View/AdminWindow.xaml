@@ -24,7 +24,7 @@
             <TextBox x:Name="UsernameSearch" Margin="8" Width="220" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15" VerticalAlignment="Center"/>
             <Button x:Name="UserSearchButton" FontSize="15" Margin="8" Content="{DynamicResource search}" Click="UserSearchButton_Click" VerticalAlignment="Center" Height="30"/>
         </StackPanel>
-        <DataGrid Grid.Row="2" Grid.Column="1" x:Name = "Users"/>
+        <DataGrid Grid.Row="2" Grid.Column="1" x:Name = "Users" CanUserDeleteRows="False"/>
         <Button Grid.Row="3" Grid.Column="1" x:Name="UpdateUsers" Margin="0,0,8,0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="UpdateUsers_Click" Content="{DynamicResource apply}" FontSize="20"/>
         <Button Grid.Row="3" Grid.Column="1" x:Name="Calendar" Margin="8,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Calendar_Click" Content="{DynamicResource calendar}" FontSize="20"/>
     </Grid>
