@@ -25,7 +25,7 @@
 
     <system:String x:Key="theme">Tema</system:String>
     <system:String x:Key="dark">Tamna</system:String>
-    <system:String x:Key="light">Svijetla</system:String>
+    <system:String x:Key="crazy">Šargopirgasto</system:String>
     <system:String x:Key="green">Zelena</system:String>
 
 

@@ -9,10 +9,8 @@
 
     <Window.Background>
         <RadialGradientBrush>
-            <GradientStop Color="#FF313131" Offset="0"/>
-            <GradientStop Color="#FF181818" Offset="1"/>
-            <!--<GradientStop Color="#0f9b0f" Offset="0"/>-->
-            <!--<GradientStop Color="#000000" Offset="1"/>-->
+            <GradientStop Color="{DynamicResource Gradient1}" Offset="0"/>
+            <GradientStop Color="{DynamicResource Gradient2}" Offset="1"/>
         </RadialGradientBrush>
     </Window.Background>
     <Grid>
@@ -141,7 +139,7 @@
                         <DataTemplate>
                             <!--Box-->
                             <Border BorderBrush="Black" BorderThickness="1" Padding="0">
-                                <Border Name="InnerBorder" BorderBrush="{Binding Path=Notes, Converter={StaticResource DayBorderColorConverter}}" BorderThickness="2">
+                                <Border Name="InnerBorder" BorderBrush="{Binding Path=HasNotes, Converter={StaticResource DayBorderColorConverter}}" BorderThickness="2">
                                     <Border.Style>
                                         <Style TargetType="{x:Type Border}">
                                             <Style.Triggers>

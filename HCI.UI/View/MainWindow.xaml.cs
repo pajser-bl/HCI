@@ -1,13 +1,14 @@
 ﻿using HCI.Data.Model;
-using HCI.UI.Converters;
 using HCI.UI.View;
 using System.Linq;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Threading;
+using System.Windows.Threading;
+using System.Threading.Tasks;
 
 namespace HCI.UI
 {
@@ -35,10 +36,8 @@ namespace HCI.UI
             InitializeComponent();
             _user = user;
             dbContext = ((App)Application.Current).DbContext;
-            App.ChangeTheme((int)_user.Theme);
-            App.ChangeLanguage((int)_user.Language);
 
-            //App.Current.Resources.
+
             for (int i = -50; i < 50; i++)
             {
                 cboYear.Items.Add(DateTime.Today.AddYears(i).Year);
@@ -50,25 +49,22 @@ namespace HCI.UI
             cboMonth.SelectionChanged += (o, e) => RefreshCalendar();
             cboYear.SelectionChanged += (o, e) => RefreshCalendar();
 
-            //DataContext = this;
             CurrentDate = DateTime.Today;
 
-            //Days = new ObservableCollection<Day>();
             BuildCalendar(DateTime.Today);
         }
+
+     
         public void BuildCalendar(DateTime targetDate)
         {
             var days = new List<Day>();
-            //Calculate when the first day of the month is and work out an 
-            //offset so we can fill in any boxes before that.
             DateTime d = new DateTime(targetDate.Year, targetDate.Month, 1);
             int offset = DayOfWeekNumber(d.DayOfWeek);
             if (offset != 1) d = d.AddDays(-offset);
             var matches=from n in dbContext.Notes
-                        where n.User.Id==_user.Id && n.Datetime>=targetDate && n.Datetime<=targetDate.AddDays(42)
+                        where n.User.Id==_user.Id && n.Datetime>=targetDate.AddDays(-30) && n.Datetime<=targetDate.AddDays(30)
                         select n.Datetime.Date;
             var daysWithNotes = matches.ToList();
-            //Show 6 weeks each with 7 days = 42
             for (int box = 1; box <= 42; box++)
             {
                 Day day = new Day { Date = d, Enabled = true, IsTargetMonth = targetDate.Month == d.Month };
@@ -136,4 +132,6 @@ namespace HCI.UI
             this.Day = day;
         }
     }
+
+    
 }

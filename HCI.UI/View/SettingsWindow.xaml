@@ -29,6 +29,7 @@
             <ComboBox Grid.Row="2" Grid.Column="2" x:Name="ThemeComboBox" SelectionChanged="Theme_SelectionChanged" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Center" Width="120" FontSize="20">
                 <ComboBoxItem Content="{DynamicResource dark}"/>
                 <ComboBoxItem Content="{DynamicResource green}"/>
+                <ComboBoxItem Content="{DynamicResource crazy}"/>
             </ComboBox>
     </Grid>
 </Window>

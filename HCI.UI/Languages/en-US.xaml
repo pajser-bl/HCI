@@ -25,7 +25,7 @@
 
     <system:String x:Key="theme">Theme</system:String>
     <system:String x:Key="dark">Dark</system:String>
-    <system:String x:Key="light">Light</system:String>
+    <system:String x:Key="crazy">Crazy</system:String>
     <system:String x:Key="green">Green</system:String>
 
     <system:String x:Key="language">Language</system:String>

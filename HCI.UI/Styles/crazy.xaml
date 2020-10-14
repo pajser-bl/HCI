@@ -1,24 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:HCI.Styles">
+                    xmlns:local="clr-namespace:HCI.UI.Styles">
     <Style TargetType="{x:Type Button}">
         <Setter Property="Background" Value="Gainsboro" />
         <Setter Property="BorderBrush" Value="AliceBlue" />
     </Style>
 
-    <Color x:Key="Gradient1">#0f9b0f</Color>
-    <Color x:Key="Gradient2">#000000</Color>
+    <Color x:Key="Gradient1">#f7ff00</Color>
+    <Color x:Key="Gradient2">#db36a4</Color>
 
     <Style TargetType="{x:Type TextBlock}">
-        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
     </Style>
 
     <Style TargetType="{x:Type Label}">
-        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
     </Style>
 
     <Style TargetType="{x:Type ComboBox}">
-        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
     </Style>
-
 </ResourceDictionary>

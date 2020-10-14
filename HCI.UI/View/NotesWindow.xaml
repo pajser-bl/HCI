@@ -8,10 +8,8 @@
         Title="NotesWindow" Height="450" Width="800" Closed="Window_Closed" Closing="Window_Closing">
     <Window.Background>
         <RadialGradientBrush>
-            <GradientStop Color="#FF313131" Offset="0"/>
-            <GradientStop Color="#FF181818" Offset="1"/>
-            <!--<GradientStop Color="#0f9b0f" Offset="0"/>-->
-            <!--<GradientStop Color="#000000" Offset="1"/>-->
+            <GradientStop Color="{DynamicResource Gradient1}" Offset="0"/>
+            <GradientStop Color="{DynamicResource Gradient2}" Offset="1"/>
         </RadialGradientBrush>
     </Window.Background>
     <Window.Foreground>
@@ -37,7 +35,7 @@
         </StackPanel>
         <DataGrid Grid.Row="2" Grid.Column="1" x:Name = "Notes" Background="Transparent" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="{DynamicResource time}" Binding="{Binding Datetime, StringFormat=\{0:dd.MM.yy HH:mm:ss\}}"/>
+                <DataGridTextColumn Header="{DynamicResource time}" Binding="{Binding Datetime, StringFormat=\{0:dd.MM.yyyy HH:mm:ss\}}"/>
                 <DataGridTextColumn Header="{DynamicResource name}" Binding="{Binding Name}" />
                 <DataGridTextColumn Header="{DynamicResource description}" Binding="{Binding Description}" />
             </DataGrid.Columns>

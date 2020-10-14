@@ -3,6 +3,7 @@
     public enum Theme
     {
         Dark,
-        Green
+        Green,
+        Crazy
     }
 }

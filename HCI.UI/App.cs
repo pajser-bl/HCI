@@ -27,8 +27,9 @@ namespace HCI.UI {
         {
             App.Current.Resources.MergedDictionaries[1].Source = Index switch
             {
-                1 => new Uri("/Styles/green.xaml", UriKind.RelativeOrAbsolute),//Srb
-                _ => new Uri("/Styles/dark.xaml", UriKind.RelativeOrAbsolute),//Eng
+                2 => new Uri("/Styles/crazy.xaml", UriKind.RelativeOrAbsolute),//Crazy
+                1 => new Uri("/Styles/green.xaml", UriKind.RelativeOrAbsolute),//Green
+                _ => new Uri("/Styles/dark.xaml", UriKind.RelativeOrAbsolute),//Dark
             };
         }
     }
