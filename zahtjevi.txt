@@ -1,0 +1,10 @@
+Kalendar sa bilješkama.
+
+Informacioni sistem zamišljen kao višekorisnička aplikacija
+ u kojoj svaki korisnik pravi, uređuje i briše svoje bilješke.
+ 
+Zahtjevi:
+*Dva nivoa pristupa: administrator i korisnik
+*Administrator kontroliše korisnicima(CRUD)
+*Svaki korisnik ima svoje bilješke(CRUD)
+*Može biti više bilješki po danu
